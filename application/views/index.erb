@@ -4,6 +4,9 @@
 
 <html>
 <head>
+
+	<title>HackRHS 2016</title>
+
 	<!--metadata-->
 	<meta name="charset" content="UTF-8">
 	<meta name="keywords" content="REF, Ridgewood Education Board, Ridgewood, New Jersey, Grant, Fundraising">
@@ -40,10 +43,10 @@
 					anchors: ['1stPage', '2ndPage', '3rdPage', '4thPage', '5thPage'],
 
 					autoScrolling: true,
-					resize: true,
+					resize: false,
 					responsive: 900,
 					fitSection: true,
-					navigation: true,
+					navigation: false,
 					continuousVertical: false,
 					paddingTop: '20px',
 					css3: true,
@@ -51,7 +54,19 @@
 			}
 
 			initialization();
+			
+			//when buttons are clicked
+			$('#student').click(function(e){
+				e.preventDefault();
+				$.fn.fullpage.moveTo(4);
+			});
+
+			$('#sponsorBtn').click(function(e){
+				e.preventDefault();
+				$.fn.fullpage.moveTo(3);
+			});
 		});
+
 	</script>
 	<style>
 
@@ -85,14 +100,17 @@
                   	<li menuanchor="1stPage">
                   		<a href="#1stPage">About</a>
                   	</li>
+                  	<li menuanchor="2ndPage">
+                    	<a href="#2ndPage">FAQs</a>
+                  	</li>
                   	<li menuanchor="3rdPage">
-                    	<a href="#3rdPage">FAQs</a>
+                    	<a href="#3rdPage">Sponsors</a>
                   	</li>
                   	<li menuanchor="4thPage">
-                    	<a href="#4thPage">Sponsors</a>
+                    	<a href="#4thPage">Sign Up</a>
                   	</li>
                   	<li menuanchor="5thPage">
-                    	<a href="#5thPage">Sign Up Now</a>
+                  		<a href="#5thPage">Contact</a>
                   	</li>
                 </ul>
             </div>
@@ -102,19 +120,118 @@
 			<div class="wrapper">	
 				<div class="row text-center">
 					<div class="b_container">
-						<b>HackRHS</b>
+						<b style="color: #fff;">Hack RHS</b>
 						<h2>A Tradition of Excellence</h2>
 					</div>
 				</div>
 			</div>
-			<div class="row text-center">
-				<button id="signup"class="btn btn-default">
-					<h3>Sign Up</h3>
-				</button>
+			<div class="row">
+				<div class="col-lg-6 text-center">
+					<button id="student"class="btn btn-default">
+						<h3>I'm a Student</h3>
+					</button>
+				</div>
+				<div class="col-lg-6 text-center">
+					<button id="sponsorBtn" class="btn btn-default">
+						<h3>I'm a Sponsor</h3>
+					</button>
+				</div>
+			</div>
+		</div>
+		<div class="section" id="faqs">
+			<div class="wrapper" id="faqWrap">
+				<div class="row text-center">
+					<h1>FAQs</h1>
+				</div>
+				<hr>
+				<div class="row">
+					<div class="col-lg-3">
+						<h2>When and Where Is HackRHS?</h2>
+						<p>HackRHS is at Ridgewood High School in Ridgewood, NJ</p>
+						<b>627 East Ridgewood Avenue, 07450</b>
+						<p>The event takes place on May 28th through May 29th, specific times are still to be determined</p>
+					</div>
+					<div class="col-lg-3">
+						<h2>What Is a Hackathon?</h2>
+						<p>No, you will not be invading anyone's privacy. A hackathon is a "building contest" among programmers in which participants compete to see who can build the best website, game, or app. No previous coding experience is required.</p>
+					</div>
+					<div class="col-lg-3">
+						<h2>How Much Does It Cost?</h2>
+						<p>HackRHS is free for all participants, however transportation costs will not be reimbursed and while food is free energy drinks will be sold.</p>
+					</div>
+					<div class="col-lg-3">
+						<h2>Can I Leave HackRHS and Return During the Event?</h2>
+						<p>Any participant that leaves Ridgewood High School during the event will not be allowed to re-enter. Participants should arrive at the high school on time before the opening ceremony to avoid any confusion.</p>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-lg-3">
+						<h2>But I don't Know How To Code?</h2>
+						<p>No experience, no problem! At HackRHS, there are several peers and mentors who will help you learn the basics of programming so you can starts building on your own.</p>
+					</div>
+					<div class="col-lg-3">
+						<h2>I'm Not An RHS Student, Can I Still Attend?</h2>
+						<p>Absolutely! Any student in High School and Middle School can be a hacker regardless of what school he/she attends. Are you a college student? You can still get involved! <a href="mailto:contact@hackrhs.com">contact us</a> to become a mentor.</p>
+					</div>
+					<div class="col-lg-3">
+						<h2>Can I Start My Hack (Project) Before Arriving At HackRHS?</h2>
+						<p>No. All hacks up for review must be started after the HackRHS opening ceremony. If judges find out that a hack was built prior to the event, the participant will be disqualified from the contest.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="section" id="sponsor">
+			<div class="wrapper" id="s_text">
+				<br>
+				<div class="text-center">
+					<h1>Sponsors</h1>
+				</div>
+				<br>
+				<div class="text-center">
+					<h3 class="text-center">Interested in Supporting HackRHS? Contact us at <a href="mailto:contact@hackrhs.com">contact@hackrhs.com</a> we would love to have you!!!</h3>
+				</div>
 			</div>
 		</div>
 		<div class="section" id="signup">
-
+			<div class="wrapper">
+				<div class="row text-center">
+					<h1>Signup</h1>
+				</div>
+				<div class="row text-center">
+					<h3>Unfortunately, signups for HackRHS have not started yet :( see <a menuanchor="2ndPage" href="#2ndPage">FAQs</a> for information regarding the hackathon. For any questions, contact us at <a href="mailto:contact@hackrhs.com">contact@hackrhs.com</a> and we'll get back to you as soon as we can.</h3>
+				</div>
+			</div>
+		</div>
+		<div class="section" id="contact">
+			<div class="wrapper">
+				<div class="row text-center">
+					<h1>Contact Us</h1>
+					<hr>
+				</div>
+				<br>
+				<div class="row text-center">
+					<div class="col-lg-4">
+						<a href="mailto:contact@hackrhs.com" target="_blank"><i class="fa fa-envelope fa-3x"></i></a>
+						<br>
+						<p>contact@hackrhs.com</p>
+					</div>
+					<div class="col-lg-4">
+						<a href="#"><i class="fa fa-twitter-square fa-3x"></i></a>
+						<br>
+						<p>Twitter Account</p>
+					</div>
+					<div class="col-lg-4">
+						<a href="#"><i class="fa fa-facebook-square fa-3x"></i></a>
+						<br>
+						<p>Facebook Account</p>
+					</div>
+				</div>
+				<footer>
+					<div class="row text-center">
+						<p>Copyright &copy;2016 HackRHS All Rights Reserved</p>
+					</div>
+				</footer>
+			</div>
 		</div>
 	</div>
 </body>
