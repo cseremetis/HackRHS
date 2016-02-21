@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<!--created February 20, 2016 by Christian Seremetis and Guyon Park-->
+
+
+<html>
+<head>
+	<!--metadata-->
+	<meta name="charset" content="UTF-8">
+	<meta name="keywords" content="REF, Ridgewood Education Board, Ridgewood, New Jersey, Grant, Fundraising">
+	<meta name="author" content="Christian Seremetis">
+	<meta name="dcterms.rightsHolder" content="Ridgewood Education Foundation">
+	<meta name="dcterms.dateCopyrighted" content="2015">
+
+	<!--personal css-->
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+
+	<!--fullPage css-->
+	<link rel="stylesheet" type="text/css" href="css/jquery.fullpage.css">
+
+	<!--font awesome icons-->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
+	<!--bootstrap-->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+		<!--jquery-->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+
+		<!--fullPage js-->
+		<script src="scripts/jquery.fullPage.js"></script>
+		<script type="text/javascript" src="scripts/jquery.fullPage.min.js"></script>
+
+		<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
+
+	<script>
+		$(document).ready(function(){
+			//fullPage initialization
+
+			function initialization(){
+				$('#myContainer').fullpage({
+					anchors: ['1stPage', '2ndPage', '3rdPage', '4thPage', '5thPage'],
+
+					autoScrolling: true,
+					resize: true,
+					responsive: 900,
+					fitSection: true,
+					navigation: true,
+					continuousVertical: false,
+					paddingTop: '20px',
+					css3: true,
+				});
+			}
+
+			initialization();
+		});
+	</script>
+	<style>
+
+		/*adjusts arrow location*/
+		.fp-controlArrow.fp-prev {
+			left: 50px;
+		}
+
+		.fp-controlArrow.fp-next {
+			right: 50px;
+		}
+	</style>
+</head>
+
+<body>
+		<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+					<li menuanchor="1stPage">
+                		<a class="navbar-brand" href="#1stPage">HackRHS</a>
+					</li>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-collapse">
+                <ul class="nav navbar-nav">
+                  	<li menuanchor="1stPage">
+                  		<a href="#1stPage">About</a>
+                  	</li>
+                  	<li menuanchor="3rdPage">
+                    	<a href="#3rdPage">FAQs</a>
+                  	</li>
+                  	<li menuanchor="4thPage">
+                    	<a href="#4thPage">Sponsors</a>
+                  	</li>
+                  	<li menuanchor="5thPage">
+                    	<a href="#5thPage">Sign Up Now</a>
+                  	</li>
+                </ul>
+            </div>
+    	</nav>
+	<div id="myContainer">
+		<div class="section" id="index">
+			<div class="wrapper">	
+				<div class="row text-center">
+					<div class="b_container">
+						<b>HackRHS</b>
+						<h2>A Tradition of Excellence</h2>
+					</div>
+				</div>
+			</div>
+			<div class="row text-center">
+				<button id="signup"class="btn btn-default">
+					<h3>Sign Up</h3>
+				</button>
+			</div>
+		</div>
+		<div class="section" id="signup">
+
+		</div>
+	</div>
+</body>
+</html>
+
+
