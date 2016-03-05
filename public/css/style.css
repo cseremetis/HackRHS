@@ -27,51 +27,41 @@ footer{
 	padding-top: 100px;
 }
 
+.fa{
+	padding-bottom: 10px;
+}
+
 .b_container{
-	margin-right: 200px;
-	margin-left: 200px;
-	padding-top: 20px;
-	padding-bottom: 20px;
-	font-size: 100px;
+	margin: 0 50px 0 50px
 }
 
-.b_container, #s_text{
-	background-color: #000;
-	color: #fff;
-	opacity: 0.7;
-}
-
-.section{
-	font-family: 'Titillium Web', sans-serif;
+#signUpLabel{
+	background-image: whitesmoke;
 }
 
 #faqWrap{
-	margin-right: 50px;
-	margin-left: 50px;
-	margin-top: 15px;
+	margin: 15px 50px 0 50px;
 }
 
 #index{
-	background-image: url('../photos/cover.JPG');
+	background-image: url('../images/cover.JPG');
 	-webkit-background-size: cover;
   	-moz-background-size: cover;
   	-o-background-size: cover;
   	background-size: cover;
 }
 
-#student, #sponsorBtn{
-	margin-top: 50px;
-	border-radius: 10px;
-	padding-bottom: 0%;
-	padding-top: 0%;	
-}
-
 #sponsor{
-	background-image: url("../photos/steeple.JPG");
+	background-image: url("../images/steeple.JPG");
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-0-background-size: cover;
 	background-size: cover;
+}
+
+#signup{
+	margin-top: 0%;
+	background-color: whitesmoke;
 }
 
 #s_text{
@@ -80,4 +70,22 @@ footer{
 	margin-right: 200px;
 }
 
+#s_header{
+	padding-top: 20px;
+}
 
+.b_container, #s_text{
+	background-color: #000;
+	color: #fff;
+	opacity: 0.7;
+}
+
+#student, #sponsorBtn{
+	margin-top: 50px;
+	border-radius: 10px;
+	padding: 0 5 0 5
+}
+
+.navbar, .section, footer{
+	font-family: 'Titillium Web', sans-serif;
+}

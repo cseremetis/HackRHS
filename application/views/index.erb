@@ -25,53 +25,36 @@
 
 	<!--bootstrap-->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
-	
+
 	<!--jquery-->
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-
-	<!--fullPage js-->
-	<script src="scripts/jquery.fullPage.js"></script>
-	<script type="text/javascript" src="scripts/jquery.fullPage.min.js"></script>
-
-	<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
+	<script src="js/jquery-1.12.0.min.js"></script>
 
 	<script>
 		$(document).ready(function(){
-			//fullPage initialization
-
+			//initialize page
 			function initialization(){
 				$('#myContainer').fullpage({
-					anchors: ['1stPage', '2ndPage', '3rdPage', '4thPage', '5thPage'],
-
-					autoScrolling: true,
-					resize: false,
-					responsive: 900,
-					fitSection: true,
-					navigation: false,
-					continuousVertical: false,
-					paddingTop: '20px',
-					css3: true,
+					anchors: ['1stPage', '2ndPage', '3rdPage', '4thPage'],
+					autoScrolling: false,
+					fitToSection: false,
+					responsive: 700,
+					scrollBar: true,
+					scrollOverflow: false,
 				});
 			}
 
 			initialization();
 			
-			//when buttons are clicked
-			$('#student').click(function(e){
-				e.preventDefault();
-				$.fn.fullpage.moveTo(4);
-			});
-
-			$('#sponsorBtn').click(function(e){
-				e.preventDefault();
-				$.fn.fullpage.moveTo(3);
-			});
 		});
-
 	</script>
 
 	<!--adjusts carousel arrow location-->
 	<style>
+
+		body{
+			margin: 0px;
+			padding: 0p;
+		}
 
 		/*adjusts arrow location*/
 		.fp-controlArrow.fp-prev {
@@ -85,59 +68,70 @@
 </head>
 
 <body>
-		<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
+		<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+			<div class="container">
+            	<div class="navbar-header">
+                	<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#collapseMenu">
+                    	<span class="icon-bar"></span>
+                    	<span class="icon-bar"></span>
+                    	<span class="icon-bar"></span>
+                	</button>
 					<li menuanchor="1stPage">
-                		<a class="navbar-brand" href="#1stPage">HackRHS</a>
+               			<a class="navbar-brand" href="#1stPage">HackRHS</a>
 					</li>
-            </div>
-            <div class="collapse navbar-collapse" id="navbar-collapse">
-                <ul class="nav navbar-nav">
-                  	<li menuanchor="1stPage">
-                  		<a href="#1stPage">About</a>
-                  	</li>
-                  	<li menuanchor="2ndPage">
-                    	<a href="#2ndPage">FAQs</a>
-                  	</li>
-                  	<li menuanchor="3rdPage">
-                    	<a href="#3rdPage">Sponsors</a>
-                  	</li>
-                  	<li menuanchor="4thPage">
-                    	<a href="#4thPage">Sign Up</a>
-                  	</li>
-                  	<li menuanchor="5thPage">
-                  		<a href="#5thPage">Contact</a>
-                  	</li>
-                </ul>
-            </div>
-    	</nav>
+            	</div>
+            	<div class="collapse navbar-collapse" id="collapseMenu">
+                	<ul class="nav navbar-nav">
+                  		<li id="1" menuanchor="1stPage">
+                  			<a href="#1stPage">About</a>
+                  		</li>
+                  		<li id="2" menuanchor="2ndPage">
+                    		<a href="#2ndPage">FAQs</a>
+                  		</li>
+                  		<li id="3" menuanchor="3rdPage">
+                    		<a href="#3rdPage">Sponsors</a>
+                  		</li>
+                  		<li id="4" menuanchor="4thPage">
+                    		<a href="#4thPage">Sign Up</a>
+                  		</li>
+                	</ul>
+            	</div>
+        	</div>
+    	</div>
 	<div id="myContainer">
 		<div class="section" id="index">
-			<div class="wrapper">	
-				<div class="row text-center">
-					<div class="b_container">
-						<b style="color: #fff;">Hack RHS</b>
-						<h2>A Tradition of Excellence</h2>
+			<div class="wrapper">
+				<div class="b_container">
+					<div class="row">
+						<div class="col-lg-4 text-center">
+							<h1>Hack RHS</h1>
+							<img width="200px" height="200px" src="images/logo.png">
+							<h3>A Tradition of Excellence</h3>
+						</div>
+						<div class="col-lg-4">
+							<h2>May 28-29, 2016</h2>
+							<h2>627 East Ridgewood Ave.</h2>
+							<h2>Ridgewood, NJ</h2>
+							<h2>07450</h2>
+						</div>
+						<div class="col-lg-4">
+							<button id="student" class="btn btn-default">
+								<h3>Students</h3>
+							</button>
+							<br>
+							<button id="sponsorBtn" class="btn btn-default">
+								<h3>Sponsors</h3>
+							</button>
+						</div>
 					</div>
-				</div>
+				</div>	
 			</div>
 			<div class="row">
 				<div class="col-lg-6 text-center">
-					<button id="student"class="btn btn-default">
-						<h3>I'm a Student</h3>
-					</button>
+					
 				</div>
 				<div class="col-lg-6 text-center">
-					<button id="sponsorBtn" class="btn btn-default">
-						<h3>I'm a Sponsor</h3>
-					</button>
+					
 				</div>
 			</div>
 		</div>
@@ -187,7 +181,7 @@
 			<div class="wrapper" id="s_text">
 				<br>
 				<div class="text-center">
-					<h1>Sponsors</h1>
+					<h1 id="s_header">Sponsors</h1>
 				</div>
 				<br>
 				<div class="text-center">
@@ -196,47 +190,55 @@
 			</div>
 		</div>
 		<div class="section" id="signup">
-			<div class="wrapper" id="faqWrap">
-				<div class="row text-center">
-					<h1>Signup</h1>
-				</div>
-				<div class="row text-center">
-					<h3>Unfortunately, signups for HackRHS have not started yet :( see <a menuanchor="2ndPage" href="#2ndPage">FAQs</a> for information regarding the hackathon. For any questions, contact us at <a href="mailto:hackrhs@gmail.com">hackrhs@gmail.com</a> and we'll get back to you as soon as we can.</h3>
-				</div>
-			</div>
-		</div>
-		<div class="section" id="contact">
 			<div class="wrapper">
 				<div class="row text-center">
-					<h1>Contact Us</h1>
-					<hr>
+					<h1>Sign Up for 2016 HackRHS</h1>
 				</div>
-				<br>
-				<div class="row text-center">
-					<div class="col-lg-4">
-						<a href="mailto:hackrhs@gmail.com" target="_blank"><i class="fa fa-envelope fa-3x"></i></a>
-						<br>
-						<p>hackrhs@gmail.com</p>
-					</div>
-					<div class="col-lg-4">
-						<a href="#"><i class="fa fa-twitter-square fa-3x"></i></a>
-						<br>
-						<p></p>
-					</div>
-					<div class="col-lg-4">
-						<a href="#"><i class="fa fa-facebook-square fa-3x"></i></a>
-						<br>
-						<p></p>
-					</div>
+				<div class="row">
+					<!-- Change the width and height values to suit you best -->
+					<div class="typeform-widget" data-url="https://hackrhs.typeform.com/to/YqP4cT" data-text="Registration Form" style="width:100%;height:500px;"></div>
+					<script>(function(){var qs,js,q,s,d=document,gi=d.getElementById,ce=d.createElement,gt=d.getElementsByTagName,id='typef_orm',b='https://s3-eu-west-1.amazonaws.com/share.typeform.com/';if(!gi.call(d,id)){js=ce.call(d,'script');js.id=id;js.src=b+'widget.js';q=gt.call(d,'script')[0];q.parentNode.insertBefore(js,q)}})()</script>
+    				<div style="font-family: Sans-Serif;font-size: 12px;color: #999;opacity: 0.5; padding-top: 5px;">Powered by <a href="http://www.typeform.com/?utm_campaign=YqP4cT&amp;utm_source=typeform.com-2197455-Basic&amp;utm_medium=typeform&amp;utm_content=typeform-embedded&amp;utm_term=EN" style="color: #999" target="_blank">Typeform</a></div>
+
 				</div>
-				<footer>
-					<div class="row text-center">
-						<p>Copyright &copy;2016 HackRHS All Rights Reserved</p>
-					</div>
-				</footer>
 			</div>
 		</div>
+		<footer>
+			<div class="wrapper">
+				<div class="row">
+					<div class="col-lg-4 text-center">
+						<img width="200px" height="200px"src="images/logo.png">
+					</div>
+					<div class="col-lg-4">
+						<h3>Contact Us:</h3>
+						<br>
+						<b>Ridgewood High School, 627 East Ridgewood Avenue, Ridgewood, NJ, 07450</b>
+					</div>
+					<div class="col-lg-4 text-center">
+						<a href="mailto:hackrhs@gmail.com" target="_blank"><i class="fa fa-envelope fa-3x"></i></a>
+						<br>
+						<a href="#"><i class="fa fa-github-alt fa-3x"></i></a>
+						<br>
+						<a href="#"><i class="fa fa-twitter fa-3x"></i></a>
+						<br>
+						<a href="#"><i class="fa fa-facebook fa-3x"></i></a>
+					</div>
+				</div>
+				<div class="row text-center">
+					<p>Copyright &copy;2016 HackRHS All Rights Reserved</p>
+				</div>
+			</footer>
+		</div>
 	</div>
+
+	<!--bootstrap-->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+	<!--scroll-->
+	<script src="js/jquery.fullPage.min.js"></script>
+
+	<!--personal js-->
+	<script src="js/main.js"></script>
 </body>
 </html>
 
