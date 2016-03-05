@@ -18,24 +18,16 @@ $(document).ready(function(){
 			$('ul li').removeClass('active')
 		})
 
-		$('#index').hover(function(){
+		$('#about').hover(function(){
 			$('#1').addClass('active');
 		});
 
-		$('#faqs').hover(function(){
+		$('#sponsor').hover(function(){
 			$('#2').addClass('active');
 		});
 
-		$('#sponsor').hover(function(){
+		$('#faqs').hover(function(){
 			$('#3').addClass('active');
-		});
-
-		$('#signup').hover(function(){
-			$('#4').addClass('active');
-		});
-
-		$('#contact').hover(function(){
-			$('#5').addClass('active');
 		});
 	}
 

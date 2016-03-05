@@ -39,7 +39,7 @@ footer{
 	background-image: whitesmoke;
 }
 
-#faqWrap{
+.fit{
 	margin: 15px 50px 0 50px;
 }
 
@@ -57,11 +57,6 @@ footer{
 	-moz-background-size: cover;
 	-0-background-size: cover;
 	background-size: cover;
-}
-
-#signup{
-	margin-top: 0%;
-	background-color: whitesmoke;
 }
 
 #s_text{
