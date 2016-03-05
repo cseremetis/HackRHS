@@ -7,12 +7,6 @@
 
 $(document).ready(function(){
 
-	//when buttons are clicked
-	$('#student').click(function(e){
-		e.preventDefault();
-		$.fn.fullpage.moveTo(4);
-	});
-
 	$('#sponsorBtn').click(function(e){
 		e.preventDefault();
 		$.fn.fullpage.moveTo(3);
