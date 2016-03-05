@@ -40,6 +40,7 @@
 					responsive: 700,
 					scrollBar: true,
 					scrollOverflow: false,
+					resize: false,
 				});
 			}
 
@@ -68,43 +69,46 @@
 </head>
 
 <body>
-		<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-			<div class="container">
-            	<div class="navbar-header">
-                	<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#collapseMenu">
-                    	<span class="icon-bar"></span>
-                    	<span class="icon-bar"></span>
-                    	<span class="icon-bar"></span>
-                	</button>
-					<li menuanchor="1stPage">
-               			<a class="navbar-brand" href="#1stPage">HackRHS</a>
-					</li>
-            	</div>
-            	<div class="collapse navbar-collapse" id="collapseMenu">
-                	<ul class="nav navbar-nav">
-                  		<li id="1" menuanchor="1stPage">
-                  			<a href="#2ndPage">About</a>
-                  		</li>
-                  		<li id="2" menuanchor="2ndPage">
-                    		<a href="#3rdPage">Sponsors</a>
-                  		</li>
-                  		<li id="3" menuanchor="3rdPage">
-                    		<a href="#4thPage">FAQ</a>
-                  		</li>
-                  		<li id="4">
-                    		<a href="https://hackrhs.typeform.com/to/YqP4cT">Sign Up</a>
-                  		</li>
-                	</ul>
-            	</div>
-        	</div>
-    	</div>
+	<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#collapseMenu">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+				<li menuanchor="1stPage">
+                	<a class="navbar-brand" href="#1stPage">Hack RHS</a>
+				</li>
+            </div>
+            <div class="collapse navbar-collapse" id="collapseMenu">
+                <ul class="nav navbar-nav">
+                  	<li id="1" menuanchor="2ndPage">
+                  		<a href="#2ndPage">About</a>
+                  	</li>
+                  	<li id="2" menuanchor="3rdPage">
+                    	<a href="#3rdPage">Sponsors</a>
+                  	</li>
+                  	<li id="3" menuanchor="4thPage">
+                    	<a href="#4thPage">FAQ</a>
+                  	</li>
+                  	<li>
+                    	<a href="https://hackrhs.typeform.com/to/YqP4cT">Sign Up</a>
+                  	</li>
+                </ul>
+            </div>
+    	</nav>
 	<div id="myContainer">
 		<div class="section" id="index">
 			<div class="wrapper">
 				<div class="b_container">
+					<div class="row text-center">
+						<h1>Hack RHS</h1>
+					</div>
+					<hr>
 					<div class="row">
 						<div class="col-lg-4 text-center">
-							<h1>Hack RHS</h1>
 							<img width="200px" height="200px" src="images/logo.png">
 							<h3>A Tradition of Excellence</h3>
 						</div>
@@ -201,10 +205,10 @@
 					<div class="col-lg-4 text-center">
 						<img width="200px" height="200px"src="images/logo.png">
 					</div>
-					<div class="col-lg-4">
+					<div class="col-lg-4 text-center">
 						<h3>Contact Us:</h3>
 						<br>
-						<b>Ridgewood High School, 627 East Ridgewood Avenue, Ridgewood, NJ, 07450</b>
+						<b>Ridgewood High School<br>627 East Ridgewood Avenue<br>Ridgewood, NJ, 07450</b>
 					</div>
 					<div class="col-lg-4 text-center">
 						<a href="mailto:hackrhs@gmail.com" target="_blank"><i class="fa fa-envelope fa-3x"></i></a>

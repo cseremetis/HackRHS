@@ -9,8 +9,11 @@
 
 @media(max-width: 1000px){
 	.b_container{
-		width: 50%;
-		margin-top: 40px;
+		padding-top: 100px;
+	}
+
+	p, b{
+		font-size: 20px;
 	}
 }
 
@@ -33,10 +36,6 @@ footer{
 
 .b_container{
 	margin: 0 50px 0 50px
-}
-
-#signUpLabel{
-	background-image: whitesmoke;
 }
 
 .fit{
@@ -81,6 +80,6 @@ footer{
 	padding: 0 5 0 5
 }
 
-.navbar, .section, footer{
+ nav, .section, footer{
 	font-family: 'Titillium Web', sans-serif;
 }

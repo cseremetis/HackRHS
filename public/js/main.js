@@ -15,7 +15,7 @@ $(document).ready(function(){
 	function activeScroll(){
 
 		$('.section').hover(function(){
-			$('ul li').removeClass('active')
+			$('ul li').removeClass();
 		})
 
 		$('#about').hover(function(){
