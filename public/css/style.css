@@ -61,7 +61,6 @@ footer{
 #s_text{
 	width: 100%;
 	height: 100%;
-	margin-right: 200px;
 }
 
 #s_header{
@@ -82,4 +81,9 @@ footer{
 
  #navLabel, .collapse, .section, footer{
 	font-family: 'Titillium Web', sans-serif;
+}
+
+.row{
+	margin: 0 !important; /*I hate important statements as much as the next guy,
+	but this one's needed to override the bootstrap core css*/
 }
