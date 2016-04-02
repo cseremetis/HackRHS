@@ -84,6 +84,5 @@ footer{
 }
 
 .row{
-	margin: 0 !important; /*I hate important statements as much as the next guy,
-	but this one's needed to override the bootstrap core css*/
+	margin: 0 !important; /*I hate important statements as much as the next guy, but this one's needed to override the bootstrap core css*/
 }
