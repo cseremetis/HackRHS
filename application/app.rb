@@ -1,5 +1,6 @@
 require 'bundler'
 Bundler.require
+require 'tilt 2.0.4'
 
 class App<Sinatra::Base
 
